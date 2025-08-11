@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monare A Napjadi Projects | Electrical Engineering Company</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #3b82f6, #10b981);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .value-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .gallery-item {
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        .floating-btn {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Floating Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg z-50 opacity-0 transition-opacity duration-300 hover:bg-blue-700">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mr-3">
+                <img src="/assets/Monare logo.png" alt="Company Logo" class="rounded-full">
+            </div>
+                <div>
+                    <h1 class="text-2xl font-bold text-blue-800">Monare A Napjadi Projects</h1>
+                    <p class="text-sm text-gray-600">Electrical Engineering Specialists</p>
+                </div>
+            </div>
+            <button id="mobileMenuButton" class="md:hidden text-gray-700">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#about" class="nav-link text-gray-700 hover:text-blue-600">About</a></li>
+                    <li><a href="#services" class="nav-link text-gray-700 hover:text-blue-600">Services</a></li>
+                    <li><a href="#clients" class="nav-link text-gray-700 hover:text-blue-600">Clients</a></li>
+                    <li><a href="#projects" class="nav-link text-gray-700 hover:text-blue-600">Projects</a></li>
+                    <li><a href="#contact" class="nav-link text-gray-700 hover:text-blue-600">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <ul class="px-4 py-2 space-y-3">
+                <li><a href="#about" class="block py-2 text-gray-700 hover:text-blue-600">About</a></li>
+                <li><a href="#services" class="block py-2 text-gray-700 hover:text-blue-600">Services</a></li>
+                <li><a href="#clients" class="block py-2 text-gray-700 hover:text-blue-600">Clients</a></li>
+                <li><a href="#projects" class="block py-2 text-gray-700 hover:text-blue-600">Projects</a></li>
+                <li><a href="#contact" class="block py-2 text-gray-700 hover:text-blue-600">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-green-500 text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Powering South Africa's Future</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Excellence in electrical engineering, construction, and industrial solutions</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">Get in Touch</a>
+                <a href="#services" class="border-2 border-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition duration-300">Our Services</a>
+            </div>
+        </div>
+    </section>
+
+   
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 section-title">About Us</h2>
+            <div class="flex flex-col lg:flex-row items-center gap-8">
+                <div class="lg:w-1/2">
+                    <img src="/assets/linemen-working.jpg" alt="Electrical Engineering" class="rounded-lg shadow-lg w-full h-auto">
+                </div>
+                <div class="lg:w-1/2">
+                    <p class="text-lg text-gray-700 mb-6">
+                        Monare A Napjadi Projects is a distinguished electrical engineering company with a specialized focus on construction engineering and industrial electrical engineering. Renowned for our steadfast commitment to excellence, we stand as a leading entity within the industry landscape of South Africa.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Operating from our headquarters situated in Gauteng, we extend our services across the region with strategically positioned branches in Polokwane and Apel within the Sekhukhune district. This geographic footprint enables us to efficiently cater to a diverse clientele while upholding the highest standards of quality and reliability.
+                    </p>
+                    <p class="text-lg text-gray-700">
+                        At Monare A Napjadi Projects, we bring together expertise, innovation, and dedication to deliver tailored solutions that meet the unique needs of our clients. With a proven track record of success and a steadfast dedication to surpassing expectations, we are positioned as a trusted partner for projects of any scale and complexity.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section id="mission" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Mission -->
+                <div id="mission" class="lg:w-1/2 bg-blue-50 p-8 rounded-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mr-4">
+                            <i class="fas fa-bullseye text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Our Mission</h3>
+                    </div>
+                    <p class="text-gray-700 text-lg">
+                        At our core, we are more than a creator of jobs; we are architects of opportunities, dedicated to enhancing the socio-economic fabric of our nation. Through our unwavering commitment to excellence, we strive to instill confidence in our clients, ensuring their satisfaction and contributing positively to the community we serve.
+                    </p>
+                </div>
+                
+                <!-- Vision -->
+                <div id="vision" class="lg:w-1/2 bg-green-50 p-8 rounded-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600 mr-4">
+                            <i class="fas fa-eye text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Our Vision</h3>
+                    </div>
+                    <p class="text-gray-700 text-lg">
+                        Our vision at Monare A Napjadi Projects is to emerge as a pinnacle of engineering prowess in South Africa, renowned for our unparalleled commitment to quality and service excellence. We envision a future where our name becomes synonymous with innovation, reliability, and superior engineering solutions. Guided by our steadfast belief in the potential of our team, we strive to continually raise the bar of industry standards, setting new benchmarks for engineering excellence and exceeding the expectations of our clients.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Background Section -->
+    <section id="background" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 section-title">Background</h2>
+            <div class="flex flex-col lg:flex-row items-center gap-8">
+                <div class="lg:w-1/2 order-2 lg:order-1">
+                    <p class="text-lg text-gray-700 mb-6">
+                        Established in 2016 by Mr. Phasha, our company embodies a vision born from a deep-seated passion for electrical engineering and a drive for entrepreneurial excellence.
+                    </p>
+                    <p class="text-lg text-gray-700">
+                        With a firm foundation built on commitment and ambition, we have emerged as a prominent entity within the industry landscape, dedicated to serving the needs of our clients and fostering a brighter future for South Africa.
+                    </p>
+                </div>
+                <div class="lg:w-1/2 order-1 lg:order-2">
+                    <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Company Background" class="rounded-lg shadow-lg w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commitment Section -->
+    <section id="commitment" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 section-title">Commitment to Sustainability</h2>
+            <div class="flex flex-col lg:flex-row items-center gap-8">
+                <div class="lg:w-1/2">
+                    <img src="/assets/sustainability.jpg" alt="Sustainability" class="rounded-lg shadow-lg w-full h-auto">
+                </div>
+                <div class="lg:w-1/2">
+                    <p class="text-lg text-gray-700 mb-6">
+                        We are steadfast in our dedication to environmental and social sustainability. Our operations are meticulously designed to minimize environmental impact and maximize positive outcomes.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6">
+                        With a focus on safety, consistency, and professionalism, we ensure that each project is executed to the highest standards of quality and integrity.
+                    </p>
+                    <p class="text-lg text-gray-700">
+                        We maintain a zero-tolerance policy towards corruption, fostering a work environment characterized by transparency and ethical conduct.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section id="values" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 section-title">Core Values</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Value 1 -->
+                <div class="value-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mb-4">
+                        <i class="fas fa-medal text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Excellence</h3>
+                    <p class="text-gray-700">
+                        We uphold a standard of excellence in all aspects of our work, striving to surpass expectations and deliver superior outcomes.
+                    </p>
+                </div>
+                
+                <!-- Value 2 -->
+                <div class="value-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center text-green-600 mb-4">
+                        <i class="fas fa-shield-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Integrity</h3>
+                    <p class="text-gray-700">
+                        We conduct our business with the utmost integrity, maintaining transparency, honesty, and ethical conduct in all our interactions.
+                    </p>
+                </div>
+                
+                <!-- Value 3 -->
+                <div class="value-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="w-14 h-14 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-600 mb-4">
+                        <i class="fas fa-leaf text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Sustainability</h3>
+                    <p class="text-gray-700">
+                        We are committed to environmental and social sustainability, minimizing our impact on the environment and contributing positively to society.
+                    </p>
+                </div>
+                
+                <!-- Value 4 -->
+                <div class="value-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 mb-4">
+                        <i class="fas fa-user-tie text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Professionalism</h3>
+                    <p class="text-gray-700">
+                        We approach every project with professionalism and dedication, ensuring the highest quality of service and adherence to industry standards.
+                    </p>
+                </div>
+                
+                <!-- Value 5 -->
+                <div class="value-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center text-red-600 mb-4">
+                        <i class="fas fa-lightbulb text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Innovation</h3>
+                    <p class="text-gray-700">
+                        We embrace innovation and creativity, constantly seeking new and improved ways to enhance our services and deliver value to our clients.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Objectives Section -->
+    <section id="objectives" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 section-title">Objectives</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Objective 1 -->
+                <div class="flex items-start">
+                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-check-circle text-blue-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Industry Leadership</h3>
+                        <p class="text-gray-700">
+                            To establish Monare A Napjadi Projects as a leading engineering company in South Africa, renowned for our commitment to excellence and customer satisfaction.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Objective 2 -->
+                <div class="flex items-start">
+                    <div class="bg-green-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-users text-green-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Socio-Economic Development</h3>
+                        <p class="text-gray-700">
+                            To create employment opportunities and contribute to the socio-economic development of South Africa.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Objective 3 -->
+                <div class="flex items-start">
+                    <div class="bg-yellow-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-globe text-yellow-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Environmental Responsibility</h3>
+                        <p class="text-gray-700">
+                            To prioritize environmental and social sustainability in all our operations, minimizing our carbon footprint and positively impacting our community.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Objective 4 -->
+                <div class="flex items-start">
+                    <div class="bg-purple-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-hard-hat text-purple-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Safety Culture</h3>
+                        <p class="text-gray-700">
+                            To maintain a culture of safety, consistency, and professionalism across all our projects, ensuring the well-being of our team and clients.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Objective 5 -->
+                <div class="flex items-start">
+                    <div class="bg-red-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-handshake text-red-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Ethical Conduct</h3>
+                        <p class="text-gray-700">
+                            To foster a work environment characterized by transparency, integrity, and ethical conduct, with zero tolerance for corruption.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 section-title">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Electrical Installations -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-blue-600 flex items-center justify-center">
+                        <i class="fas fa-bolt text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Electrical Installations</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>LV, HT Terminations & cable joints</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Network reticulation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Substations</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Transformer installations & maintenance</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- High Mast Lighting -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-green-600 flex items-center justify-center">
+                        <i class="fas fa-lightbulb text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">High Mast Lighting</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Street light installation & maintenance</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>High mast installation & maintenance</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- General Building -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-yellow-600 flex items-center justify-center">
+                        <i class="fas fa-building text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">General Building</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Building constructions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Maintenance</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Renovations</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Mining -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-purple-600 flex items-center justify-center">
+                        <i class="fas fa-hammer text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Mining</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>AC & DC motors</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Pumps</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Valves</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Floating Switches</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Star delta motors</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Forward/reverse motors</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Stop start</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Direct on line starters</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section id="clients" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 section-title">Our Clients</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-lg overflow-hidden">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="py-3 px-4 text-left">Client</th>
+                            <th class="py-3 px-4 text-left">Project</th>
+                            <th class="py-3 px-4 text-left">Start Date</th>
+                            <th class="py-3 px-4 text-left">Completion Date</th>
+                            <th class="py-3 px-4 text-left">Value</th>
+                            <th class="py-3 px-4 text-left">Contact</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-3 px-4">Laphata La Basha Trading and Projects (City Power)</td>
+                            <td class="py-3 px-4">Maintenance of Medium and low voltage electrical network</td>
+                            <td class="py-3 px-4">September 2017</td>
+                            <td class="py-3 px-4">August 2018</td>
+                            <td class="py-3 px-4">R 1 500 000</td>
+                            <td class="py-3 px-4">Standford Manavhela<br>083 479 6581<br>011 462 2394</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-3 px-4">Thabang property developers</td>
+                            <td class="py-3 px-4">New electrical installation at Tshinange Secondary School</td>
+                            <td class="py-3 px-4">September 2017</td>
+                            <td class="py-3 px-4">December 2018</td>
+                            <td class="py-3 px-4">R 1 108 611</td>
+                            <td class="py-3 px-4">Eddy Tomes<br>082 490 7698<br>015 293 2607</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-3 px-4">Thabang property developers</td>
+                            <td class="py-3 px-4">New electrical installation at Glencore Prison</td>
+                            <td class="py-3 px-4">July 2018</td>
+                            <td class="py-3 px-4">October 2019</td>
+                            <td class="py-3 px-4">R 3 897 347.93</td>
+                            <td class="py-3 px-4">Eddy Tomes<br>082 490 7698<br>015 293 2607</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-3 px-4">Luphuyane Logistics Projects</td>
+                            <td class="py-3 px-4">New electrical installation at Elukwatini Fire Station</td>
+                            <td class="py-3 px-4">September 2018</td>
+                            <td class="py-3 px-4">July 2019</td>
+                            <td class="py-3 px-4">R 1 499 000</td>
+                            <td class="py-3 px-4">Khensani<br>082 490 7698<br>015 293 2607</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-3 px-4">Thabang property developers</td>
+                            <td class="py-3 px-4">New electrical construction at Mavalani Community Library</td>
+                            <td class="py-3 px-4">July 2019</td>
+                            <td class="py-3 px-4">-</td>
+                            <td class="py-3 px-4">R 1 374 440</td>
+                            <td class="py-3 px-4">Eddy Tomes<br>082 490 7698<br>015 293 2607</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-3 px-4">Emerald Green Power (pty) Ltd</td>
+                            <td class="py-3 px-4">Network maintenance and LV, street light maintenance, metering and ripple relays</td>
+                            <td class="py-3 px-4">2009</td>
+                            <td class="py-3 px-4">2015</td>
+                            <td class="py-3 px-4">R 1 500 000</td>
+                            <td class="py-3 px-4">Shalin Govender<br>083 605 8888</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-3 px-4">TJS Miantenance</td>
+                            <td class="py-3 px-4">Electrical installation at Brokhostspruit Rethabiseng Clinic</td>
+                            <td class="py-3 px-4">2017</td>
+                            <td class="py-3 px-4">June 2018</td>
+                            <td class="py-3 px-4">R 1 750 375.75</td>
+                            <td class="py-3 px-4">Themba Joseph Shongwe<br>011 316 7771</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-3 px-4">Gert Sibande Tvet college</td>
+                            <td class="py-3 px-4">Upgrade, renovations & refurbishment of electrical work</td>
+                            <td class="py-3 px-4">July 2023</td>
+                            <td class="py-3 px-4">February 2024</td>
+                            <td class="py-3 px-4">R 2 362 467,19</td>
+                            <td class="py-3 px-4">Sindiswa Mohoto<br>071 782 9958</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 section-title">Our Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden gallery-item">   
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Maintenance of Medium and low voltage electrical network</h3>
+                        <p class="text-gray-600 mb-3">Client: Laphata La Basha Trading and Projects (City Power)</p>
+                        <p class="text-gray-700">Completed in August 2018 with a value of R 1 500 000</p>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden gallery-item">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">New electrical installation at Tshinange Secondary School</h3>
+                        <p class="text-gray-600 mb-3">Client: Thabang property developers</p>
+                        <p class="text-gray-700">Completed in December 2018 with a value of R 1 108 611</p>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden gallery-item">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">New electrical installation at Glencore Prison</h3>
+                        <p class="text-gray-600 mb-3">Client: Thabang property developers</p>
+                        <p class="text-gray-700">Completed in October 2019 with a value of R 3 897 347.93</p>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden gallery-item">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">New electrical installation at Elukwatini Fire Station</h3>
+                        <p class="text-gray-600 mb-3">Client: Luphuyane Logistics Projects</p>
+                        <p class="text-gray-700">Completed in July 2019 with a value of R 1 499 000</p>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden gallery-item">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">New electrical construction at Mavalani Community Library</h3>
+                        <p class="text-gray-600 mb-3">Client: Thabang property developers</p>
+                        <p class="text-gray-700">Ongoing project with a value of R 1 374 440</p>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden gallery-item">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Electrical installation at Brokhostspruit Rethabiseng Clinic</h3>
+                        <p class="text-gray-600 mb-3">Client: TJS Miantenance</p>
+                        <p class="text-gray-700">Completed in June 2018 with a value of R 1 750 375.75</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliances Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 section-title">Compliance Certificates</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                    <i class="fas fa-certificate text-blue-500 mr-2"></i>
+                    ORHV-S Modules 1,2,3 & 7 at Johannesburg City Power
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                    <i class="fas fa-certificate text-blue-500 mr-2"></i>
+                    Apply & Maintain Safety in an Electrical Environment at City Power
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                    <i class="fas fa-certificate text-blue-500 mr-2"></i>
+                    Electrical Trade Test at Olifantsfontein Trade Centre
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                    <i class="fas fa-certificate text-blue-500 mr-2"></i>
+                    Installation Electrical License from Department of Labour
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                    <i class="fas fa-certificate text-blue-500 mr-2"></i>
+                    Risk Based Reliability Centered Maintenance at Optechtra
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                    <i class="fas fa-certificate text-blue-500 mr-2"></i>
+                    Lockout, Tag and Safe Working Procedures Training at Haslac
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                    <i class="fas fa-certificate text-blue-500 mr-2"></i>
+                    Oldham Mx21 Multigas Detector at Spero Group
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                    <i class="fas fa-certificate text-blue-500 mr-2"></i>
+                    Erection, Dismantling and All Aspects at Scaffolding at Access World
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                    <i class="fas fa-certificate text-blue-500 mr-2"></i>
+                    First Aid Course at St John Ambulance
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                    <i class="fas fa-certificate text-blue-500 mr-2"></i>
+                    Certificate of Compliance Course at ECA
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                    <i class="fas fa-certificate text-blue-500 mr-2"></i>
+                    Radioactivity & Radiation Contamination Exposure at Malepa Holdings
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                    <i class="fas fa-certificate text-blue-500 mr-2"></i>
+                    NTC 6 in Electrical & Mechanical Courses at NPC College
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                    <i class="fas fa-certificate text-blue-500 mr-2"></i>
+                    Business Management at Rosebank College
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                    <i class="fas fa-certificate text-blue-500 mr-2"></i>
+                    Lighting Protection & Earthing of Electrical Power System
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                    <i class="fas fa-certificate text-blue-500 mr-2"></i>
+                    CIDB Grades: PE 3EB, 3EP, 1GB, 1CE, 1ME
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                    <i class="fas fa-certificate text-blue-500 mr-2"></i>
+                    CIPC: Reg No: 2016/224717/07
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 section-title">Contact Us</h2>
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold mb-6">Get in Touch</h3>
+                        <form class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 mb-2">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-gray-700 mb-2">Phone Number</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-gray-700 mb-2">Your Message</label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                            </div>
+                            <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 w-full">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-8 rounded-lg shadow-lg h-full">
+                        <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Phone</h4>
+                                    <p class="text-gray-600">076 809 5552</p>
+                                    <p class="text-gray-600">011 203 4081</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-green-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-green-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Email</h4>
+                                    <p class="text-gray-600">lucas.phasha@yahoo.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Addresses</h4>
+                                    <p class="text-gray-600 mb-2">Stand no 19, Ga-Nkwana, Apel 0739</p>
+                                    <p class="text-gray-600">3321 Potash Street Clayville Ext. 27 1666</p>
+                                </div>
+                            </div>
+                            <div class="mt-8">
+                                <h4 class="font-semibold text-gray-800 mb-4">Follow Us</h4>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition duration-300">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="bg-blue-400 text-white p-3 rounded-full hover:bg-blue-500 transition duration-300">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="bg-pink-600 text-white p-3 rounded-full hover:bg-pink-700 transition duration-300">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="#" class="bg-blue-700 text-white p-3 rounded-full hover:bg-blue-800 transition duration-300">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-3">MN</div>
+                        <div>
+                            <h2 class="text-xl font-bold">Monare A Napjadi Projects</h2>
+                            <p class="text-sm text-gray-400">Electrical Engineering Specialists</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center md:items-end">
+                    <p class="text-gray-400 mb-2">© 2024 Monare A Napjadi Projects. All rights reserved.</p>
+                    <p class="text-gray-400">CIPC: Reg No: 2016/224717/07</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0');
+                backToTopButton.classList.add('opacity-100');
+            } else {
+                backToTopButton.classList.remove('opacity-100');
+                backToTopButton.classList.add('opacity-0');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
